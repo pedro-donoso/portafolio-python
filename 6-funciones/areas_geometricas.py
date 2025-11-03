@@ -12,3 +12,8 @@ def conversor_unidades():
             print(f"{temp}ºC = {fahrenheit:.1f}ºF = {kelvin:.1f}K")
             
             
+        elif opcion == '2':
+            clp = float(input("Pesos CLP: "))
+            usd = clp * 0.058
+            eur = clp * 0.053
+            print(f"${clp} CLP = ${usd:.2f} USD = €{eur:.2f} EUR")
