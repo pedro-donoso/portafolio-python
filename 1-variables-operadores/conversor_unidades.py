@@ -13,10 +13,10 @@ def conversor_unidades():
             print(f"{temp}°C = {fahrenheit:.1f}°F = {kelvin:.1f}K")
             
         elif opcion == '2':
-            # Conversión de monedas DESDE PESOS CHILENOS
+            # Conversión de monedas
             clp = float(input("Pesos CLP: "))
-            usd = clp * 0.00105  # Aprox 1 CLP = 0.00105 USD
-            eur = clp * 0.00098  # Aprox 1 CLP = 0.00098 EUR
+            usd = clp * 0.00105
+            eur = clp * 0.00098
             print(f"${clp:,.0f} CLP = ${usd:.2f} USD = €{eur:.2f} EUR")
             
         elif opcion == '3':
@@ -25,7 +25,7 @@ def conversor_unidades():
             pies = metros * 3.281
             pulgadas = metros * 39.37
             print(f"{metros}m = {pies:.1f} ft = {pulgadas:.1f} in")
-                        
+            
         elif opcion == '4':
             print("¡Adiós! 👋")
             break
