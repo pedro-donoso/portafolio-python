@@ -26,4 +26,12 @@ def conversor_unidades():
             print(f"{metros}m = {pies:.1f} ft = {pulgadas:.1f} in")
             
         
-       
+        elif opcion == '4':
+            print('¡Adiós!')
+            break
+        else:
+            print("Opción inválida")
+            
+            
+if __name__ == "__main__":
+    conversor_unidades()
