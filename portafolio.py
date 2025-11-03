@@ -16,7 +16,7 @@ historial = []
 # FUNCIONES
 
 def convertir_temperatura(valor, de_tipo, a_tipo):
-    """Convierte entre Celcius, Fahrenheit y Kelvin"""
+    """Convierte entre Celsius, Fahrenheit y Kelvin"""
 
     celcius = 0
 
