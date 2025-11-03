@@ -1,37 +1,45 @@
-def conversor_unidades():
-    print("CONVERSOR DE UNIDADES")
+import math
+
+def area_cuadrado(lado):
+    return lado ** 2
+
+def area_rectangulo(base, altura):
+    return base * altura
+
+def area_circulo(radio):
+    return math.pi * radio ** 2
+
+def area_triangulo(base, altura):
+    return (base * altura) / 2
+
+def menu_areas():
+    print("CALCULADORA DE ÁREAS")
     
     while True:
-        print("\n1. Temperatura\n2. Monedas\n3. Longitudes\n4. Salir")
-        opcion = input("Elige: ")
+        print("\n1. Cuadrado\n2. Rectángulo\n3. Círculo\n4. Triángulo\n5. Salir")
+        opcion = input("Elige figura: ")
         
         if opcion == '1':
-            temp = float(input("Grados Celsius: "))
-            fahrenheit = (temp * 9/5) + 32
-            kelvin = temp + 273.15
-            print(f"{temp}ºC = {fahrenheit:.1f}ºF = {kelvin:.1f}K")
-            
+            lado = float(input("Lado: "))
+            print(f"Área: {area_cuadrado(lado):.2f}")
             
         elif opcion == '2':
-            clp = float(input("Pesos CLP: "))
-            usd = clp * 0.0011
-            eur = clp * 0.0010
-            print(f"${clp} CLP = ${usd:.2f} USD = €{eur:.2f} EUR")
-            
+            base = float(input("Base: "))
+            altura = float(input("Altura: "))
+            print(f"Área: {area_rectangulo(base, altura):.2f}")
             
         elif opcion == '3':
-            metros = float(input("Metros: "))
-            pies = metros * 3.281
-            pulgadas = metros * 39.37
-            print(f"{metros}m = {pies:.1f} ft = {pulgadas:.1f} in")
+            radio = float(input("Radio: "))
+            print(f"Área: {area_circulo(radio):.2f}")
             
-        
         elif opcion == '4':
+            base = float(input("Base: "))
+            altura = float(input("Altura: "))
+            print(f"Área: {area_triangulo(base, altura):.2f}")
+            
+        elif opcion == '5':
             print('¡Adiós!')
             break
-        else:
-            print("Opción inválida")
-            
-            
-if __name__ == "__main__":
-    conversor_unidades()
+        
+if __name__ == '__main__':
+    menu_areas()
